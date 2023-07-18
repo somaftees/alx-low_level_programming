@@ -36,7 +36,7 @@ void print_times_table(int n)
 				}
 				_putchar((prod % 10) + '0');
 			}
-			putchar('\n');
+			_putchar('\n');
 		}
 	}
 }
