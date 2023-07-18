@@ -5,12 +5,11 @@
   * @c: The number to be checked.
   * Return: 1 for positive number, -1 for negative numberi
   * or 0 for anything else.
-  * n: Is a number
+  * @n: Is a number
   */
 
 int print_sign(int n)
 {
-
 	if (n > 0)
 	{
 		_putchar(43);
