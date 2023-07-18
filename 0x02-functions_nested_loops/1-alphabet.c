@@ -1,12 +1,12 @@
 #include "main.h"
 /**
-  * print_alphabet: Write alphabets
+  * print_alphabet: Write alphabets.
   *
   * Return: Void
   */
 void print_alphabet(void)
 {
-	char c; 
+	char c;
 		for (c = 'a'; c <= 'z'; c++)
 		{
 			_putchar(c);
