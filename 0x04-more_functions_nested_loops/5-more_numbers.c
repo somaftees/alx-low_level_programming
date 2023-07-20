@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * more_numbers - nmbr fct
- * Bwave ICT file
+ * more_numbers - 10 times the numbers, from 0 to 14
  * Return: no return
  */
 
