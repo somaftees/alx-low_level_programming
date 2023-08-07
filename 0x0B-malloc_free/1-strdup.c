@@ -11,7 +11,7 @@
 char *_strdup(char *str)
 {
 	int i, j = 0;
-	char *arr = malloc((j * sizeof(int)) + 1);
+	char *arr = malloc((j * sizeof(char)) + 1);
 
 	if (str == NULL || arr == NULL)
 	{
