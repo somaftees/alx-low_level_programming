@@ -1,23 +1,6 @@
 #include "main.h"
 
 /**
- * _strln - a function that detremine the lenght of string
- * @c: char
- * Return: always
- */
-
-unsigned int _strln(char *c)
-{
-	unsigned int k = 0;
-
-	while (c[k])
-	{
-		k++;
-	}
-	return (k);
-}
-
-/**
   * *string_nconcat- a function that concatenates two strings.
   * @s1: char
   * @s2: char
@@ -27,37 +10,36 @@ unsigned int _strln(char *c)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *s;
-	unsigned int i, j, n2;
+	unsigned int i, j, z;
+	char *s3;
 
 	if (s1 == NULL)
 	{
-		s1 = "";
+		i = 0;
+	}
+	else
+	{
+		for (i = 0; s1[i]; ++i)
+		;
 	}
 	if (s2 == NULL)
 	{
-		s2 = "";
+		j = 0;
 	}
-	if (n > _strln(s2))
+	else
 	{
-		n = _strln(s2);
+		for (j = 0; s2[j]; ++j)
+		;
 	}
-	s = malloc(sizeof(s1) + (n * sizeof(char) + 1));
-	if (s == NULL)
-	{
+	if (j > n)
+		j = n;
+	s3 = malloc(sizeof(char) * (i + j + 1));
+	if (s3 == NULL)
 		return (NULL);
-	}
-	n2 = _strln(s1);
-	for (i = 0; i <= n2; i++)
-	{
-		s[i] = s1[i];
-	}
-	i--;
-	for (j = 0; j < n; j++)
-	{
-		s[i] = s2[j];
-		i++;
-	}
-	s[i] = '\0';
-	return (s);
+	for (z = 0; z < i; z++)
+		s3[z] = s1[z];
+	for (z = 0; z < j; z++)
+		s3[z + i] = s2[z];
+	s3[i + j] = '\0';
+	return (s3);
 }
