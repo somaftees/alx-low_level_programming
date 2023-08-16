@@ -4,24 +4,29 @@
   * int_index - a function that searches for an integer.
   * @array: integer pointer.
   * @size: is the number of elements in the array.
-  * @cmp: is a pointer to the function to be used to compare values.
-  * Return: the index of the first element for which,
-  * If no element matches, return -1,If size <= 0, return -1.
+  * @cmp: is a pointer to the function to be used to
+  * compare values.
+  * Return:  the index of the first element,
+  * If no element matches, return -1, If size <= 0, return -1.
   */
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i = 0;
 
-	if (array && size && cmp)
+	if (size > 0)
 	{
-		while (i < size)
+		if (array != NULL && cmp != NULL)
+		{
+			while (i < size)
 			{
 				if (cmp(array[i]))
 					return (i);
 
 				i++;
 			}
+		}
 	}
+
 	return (-1);
 }
