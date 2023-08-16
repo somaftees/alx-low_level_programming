@@ -26,9 +26,9 @@ int main(int argc, char *argv[])
 	}
 	arr = (char *)main;
 
-	for (i = 0; i < b; i++)
+	for (i = 0; i < a; i++)
 	{
-	if (i == b - 1)
+	if (i == a - 1)
 	{
 	printf("%02hhx\n", arr[i]);
 	break;
