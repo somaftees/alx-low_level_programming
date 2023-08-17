@@ -1,20 +1,17 @@
 #include "variadic_functions.h"
-
 /**
  * print_all - Prints all of the arguments when specified
- * @format: specifies the necessary operations
- * Return: void
+ * @format: constant.
+ * Return: void.
  */
-
 void print_all(const char * const format, ...)
 {
-	int i;
+	int i = 0;
 	int f;
 	char *s;
 	va_list a_list;
 
 	va_start(a_list, format);
-	i = 0;
 	while (format != NULL && format[i] != '\0')
 	{
 		switch (format[i])
@@ -43,9 +40,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		if (format[i + 1] != '\0' && f == 0)
-		{
 			printf(", ");
-		}
 		i++;
 	}
 	printf("\n");
