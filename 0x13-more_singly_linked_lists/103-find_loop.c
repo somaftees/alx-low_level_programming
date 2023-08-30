@@ -10,11 +10,25 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *t = NULL;
+	listint_t *first, *second;
+	first = second = head;
 
-	while (head)
+	if (head == NULL)
+		return  (NULL);
+	if (head == head->next)
+		return (head);
+	while (first)
 	{
-		head = head->next;
+		first = first->next;
+		second = head;
+		while (first && second != first)
+		{
+			if (second == first->next)
+			{
+				return (second);
+			}
+			second = second->next;
+		}
 	}
-	return (t);
+	return (first);
 }
