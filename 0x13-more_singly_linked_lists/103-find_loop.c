@@ -10,8 +10,8 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *first, *second;
-	first = second = head;
+	listint_t *first = head;
+	listint_t *second = head;
 
 	if (head == NULL)
 		return  (NULL);
