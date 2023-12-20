@@ -1,15 +1,13 @@
 #!/usr/bin/python3
 """ I hate comments """
 
-def island_perimeter(grid):
 
+def island_perimeter(grid):
     """
-    ^-^
-       ^-^
-          ^-^
-	  ^-^
-       ^-^
-    ^-^
+     ^-^
+^-^       ^-^
+^-^       ^-^
+     ^-^
     """
     w = len(grid[0])
     h = len(grid)
