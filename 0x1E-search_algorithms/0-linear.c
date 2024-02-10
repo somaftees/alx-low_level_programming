@@ -3,7 +3,14 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-/**linear search**/
+/**
+ * linear_search - linear_search.
+ * @array: array.
+ * @size: size.
+ * @value: value.
+ * Return: i or -1.
+ */
+
 int linear_search(int *array, size_t size, int value)
 {
 	size_t i = 0;
