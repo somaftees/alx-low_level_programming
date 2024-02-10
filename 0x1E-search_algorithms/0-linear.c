@@ -4,11 +4,12 @@
 #include <unistd.h>
 
 /**
- * linear_search - linear_search.
+ * linear_search - function linear_search.
  * @array: array.
  * @size: size.
  * @value: value.
- * Return: i or -1.
+ *
+ * Return: -1 or...
  */
 
 int linear_search(int *array, size_t size, int value)
