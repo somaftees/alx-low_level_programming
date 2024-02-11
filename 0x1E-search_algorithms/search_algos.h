@@ -8,13 +8,10 @@
 
 /* STRUCTURES */
 /**
- * struct listint_s - singly linked list
- *
- * @n: Integer
- * @index: Index of the node in the list
- * @next: Pointer to the next node
- *
- * Description: singly linked list node structure
+ * struct listint_s - struct listint_s.
+ * @n: n.
+ * @index: index.
+ * @next: next.
  */
 typedef struct listint_s
 {
@@ -22,7 +19,13 @@ typedef struct listint_s
 	size_t index;
 	struct listint_s *next;
 } listint_t;
-/**structure**/
+/**
+ * struct skiplist_s - struct skiplist_s.
+ * @n: n.
+ * @index: index.
+ * @next: next.
+ * @express: express.
+*/
 typedef struct skiplist_s
 {
 	int n;
